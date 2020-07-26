@@ -1,0 +1,12 @@
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\bin\Debug\netcoreapp3.1\HospitalDataAccess.deps.json
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\bin\Debug\netcoreapp3.1\HospitalDataAccess.dll
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\obj\Debug\netcoreapp3.1\HospitalDataAccess.csprojAssemblyReference.cache
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\obj\Debug\netcoreapp3.1\HospitalDataAccess.AssemblyInfoInputs.cache
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\obj\Debug\netcoreapp3.1\HospitalDataAccess.AssemblyInfo.cs
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\bin\Debug\netcoreapp3.1\HospitalDataAccess.pdb
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\obj\Debug\netcoreapp3.1\HospitalDataAccess.dll
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\obj\Debug\netcoreapp3.1\HospitalDataAccess.pdb
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\bin\Debug\netcoreapp3.1\HospitalDataAccess.runtimeconfig.json
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\bin\Debug\netcoreapp3.1\HospitalDataAccess.runtimeconfig.dev.json
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\obj\Debug\netcoreapp3.1\HospitalDataAccess.csproj.CoreCompileInputs.cache
+D:\Work\Burak\dro4-ing\HospitalWeb\HospitalDataAccess\obj\Debug\netcoreapp3.1\HospitalDataAccess.genruntimeconfig.cache

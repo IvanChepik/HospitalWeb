@@ -1,0 +1,41 @@
+<nb-tabset>
+  <nb-tab tabTitle="Сводка">
+    <div class="col-12 col-md-12">
+      <div class="row show-grid">
+        <div class="col-6 col-md-6">
+          <div class="col-12 col-md-12" full>
+            <p>
+              Номер истории болезней
+            </p>
+            <input [value]="patient?.caseHistoryNumber" disabled fullWidth nbInput />
+          </div>
+          <div class="col-12 col-md-12" fullWidth>
+            <p>
+              Фамилия Имя Отчество
+            </p>
+            <input [value]="currentfullname" disabled nbInput fullWidth />
+          </div>
+          <div class="col-12 col-md-12">
+            <p>
+              Возраст
+            </p>
+            <input [value]="currentage" disabled fullWidth nbInput />
+          </div>
+          <div class="col-12 col-md-12">
+            <p>
+              Диагноз
+            </p>
+            <textarea [value]="patient?.diagnosis" disabled fullWidth nbInput> </textarea>
+          </div>
+        </div>
+        <div class="col-6 col-md-6"></div>
+      </div>
+    </div>
+  </nb-tab>
+  <nb-tab tabTitle="Нутритивная поддержка">
+    Нутритивная поддержка
+  </nb-tab>
+  <nb-tab tabTitle="Фамилия И.О">
+    Фамилия И.О
+  </nb-tab>
+</nb-tabset>

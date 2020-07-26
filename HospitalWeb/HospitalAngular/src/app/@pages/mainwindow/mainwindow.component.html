@@ -1,0 +1,23 @@
+<nb-layout>
+  <nb-layout-column>
+    <div class="col-md-12">
+      <div class="row show-grid">
+        <div class="col-md-8 col-8"></div>
+        <ng-container *ngIf="!(isAuthenticated | async)">
+          <div class="col-md-2 col-2">
+            <button (click)="goToRegistration()" nbButton>Регистрация</button>
+          </div>
+          <div class="col-md-2 col-2">
+            <button (click)="goToLogin()" nbButton>Вход</button>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="isAuthenticated | async">
+          <div class="col-md-4 col-4">
+            <nb-user [name]="user?.firstName + ' ' + user?.secondName">
+            </nb-user>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>

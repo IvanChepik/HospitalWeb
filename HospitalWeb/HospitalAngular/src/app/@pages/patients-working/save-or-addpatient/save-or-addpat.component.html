@@ -1,0 +1,137 @@
+<div class="col-12 col-md-12">
+  <div class="row show-grid">
+    <div class="col-7 col-md-7">
+      <div [nbSpinner]="isFormLoading" class="col-12 col-md-12" [formGroup]="patientForm">
+        <div class="row show-grid">
+          <div class="col-6 col-md-6">
+            <p>Номер истории болезней</p>
+            <input nbInput type="text" formControlName="caseHistoryNumber" />
+            <ngx-validation-message
+              label="Номер истории болезней"
+              [showRequired]="
+                caseHistoryNumber?.errors?.required && caseHistoryNumber.touched
+              "
+            >
+            </ngx-validation-message>
+            <p>Фамилия</p>
+            <input nbInput formControlName="lastName" />
+            <ngx-validation-message
+              label="Фамилию"
+              [showRequired]="lastName?.errors?.required && lastName.touched"
+            >
+            </ngx-validation-message>
+            <p>Имя</p>
+            <input nbInput formControlName="firstName" />
+            <ngx-validation-message
+              label="Имя"
+              [showRequired]="firstName?.errors?.required && firstName.touched"
+            >
+            </ngx-validation-message>
+            <p>Отчество</p>
+            <input nbInput formControlName="patronymic" />
+            <ngx-validation-message
+              label="Отчество"
+              [showRequired]="
+                patronymic?.errors?.required && patronymic.touched
+              "
+            >
+            </ngx-validation-message>
+          </div>
+          <div class="col-5 col-md-5" class="right-column">
+            <p>Дата поступления в стационар</p>
+            <input
+              nbInput
+              formControlName="dateHospital"
+              [nbDatepicker]="datehospitalpicker"
+              formControlName="dateHospital"
+            />
+            <ngx-validation-message
+              label="дату"
+              [showRequired]="
+                dateHospital?.errors?.required && dateHospital.touched
+              "
+              [showPattern]="
+                dateHospital?.hasError('pattern') && dateHospital.touched
+              "
+            >
+            </ngx-validation-message>
+            <nb-datepicker
+              format="dd.MM.yyyy"
+              #datehospitalpicker
+            ></nb-datepicker>
+            <p>Дата поступления в ОИТР</p>
+            <input
+              nbInput
+              formControlName="dateOITR"
+              [nbDatepicker]="dateOITRpicker"
+              formControlName="dateOITR"
+            />
+            <ngx-validation-message
+              label="дату"
+              [showRequired]="dateOITR?.errors?.required && dateOITR.touched"
+              [showPattern]="dateOITR?.errors?.pattern && dateOITR.touched"
+            >
+            </ngx-validation-message>
+            <nb-datepicker format="dd.MM.yyyy" #dateOITRpicker></nb-datepicker>
+            <p>Дата рождения</p>
+            <input
+              nbInput
+              formControlName="birthDate"
+              [nbDatepicker]="datebirthpicker"
+              formControlName="birthDate"
+            />
+            <ngx-validation-message
+              label="дату"
+              [showRequired]="birthDate?.errors?.required && birthDate.touched"
+              [showPattern]="birthDate?.errors?.pattern && birthDate.touched"
+            >
+            </ngx-validation-message>
+            <nb-datepicker format="dd.MM.yyyy" #datebirthpicker></nb-datepicker>
+            <p>Пол</p>
+            <nb-select formControlName="sex">
+              <nb-option value=true>
+                Мужской
+              </nb-option>
+              <nb-option value=false>
+                Женский
+              </nb-option>
+            </nb-select>
+            <ngx-validation-message
+              label="Пол"
+              [showRequired]="sex?.errors?.required && sex.touched"
+            >
+            </ngx-validation-message>
+          </div>
+          <div class="col-12 col-md-12">
+            <p>Диагноз</p>
+            <textarea id="diagnosisTextArea" nbInput formControlName="diagnosis"></textarea>
+            <ngx-validation-message
+              label="Диагноз"
+              [showRequired]="diagnosis?.errors?.required && diagnosis.touched"
+            >
+            </ngx-validation-message>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 col-md-4" [nbSpinner]="isPatientsLoading">
+      <p>Загрузить пациентов</p>
+      <nb-list id="patientsList">
+        <nb-list-item (click)="onPatientSelect(patient)" [class.isChoosen]="patient.isChoosen" class="patient-block" *ngFor="let patient of patients">       
+          <p>
+            {{ patient.firstname }} {{ patient.lastname }}
+            {{ patient.patronymic }}
+            <br>
+            <span class="case-history-number">
+            {{ patient.caseHistoryNumber }}
+          </span>
+          </p>
+        </nb-list-item>
+      </nb-list>
+      <div>
+          <button (click)="onAddPatient()" nbButton>Добавить</button>
+          <button (click)="onLoadPatient()" nbButton>Загрузить</button>
+      </div>
+    </div>
+  </div>
+</div>
